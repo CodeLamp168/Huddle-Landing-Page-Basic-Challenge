@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+
+* {
+    box-sizing:border-box;
+}
+
+
+body {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;    
+    background-color:hsl(257, 40%, 49%);
+    color:white;
+    background-image: url(./images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    height:100vh;
+
+}
+
+
+h1 {
+    font-family:'Poppins';
+    font-weight:600;
+    font-size: 25px;
+}
+
+p {
+    color:rgb(231, 226, 226);
+    font-family:'Open Sans';
+}
+
+button {
+    padding: 10px 5em;
+    border-radius:20px;
+    border:none;
+    color:hsl(257, 40%, 49%);
+    font-family:'Poppins';
+    transition:0.3s ease all;
+    margin-top:1rem;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.158);
+}
+
+button:hover {
+    background-color:hsl(300, 69%, 71%);
+    color:white;
+}
+
+.icon-area {
+    margin-top:3rem;
+}
+
+i {
+    color:white;
+    border: 2px solid;
+    border-radius:100%;
+    padding:8px;
+    transition:0.3s ease all;
+}
+
+i:hover {
+    color:hsl(300, 69%, 71%);
+}
+.icon:nth-child(2)
+{
+    margin-left:1em;
+    margin-right:1em;
+}
+
+main {
+     width:350px;
+    height:auto;
+    text-align:center;
+
+}
+
+img {
+    width:100%;
+    height:auto;
+}
+
+
+.img-area {
+    margin-top:5rem;
+}
+
+.text-area {
+    margin-top:2rem;
+}
+.illustration {
+width:350px;
+position:relative;
+top:20px;
+
+}
+.logo {
+    width:130px;
+    position:relative;
+    bottom:30px;
+    float:left
+
+}
+
+.text-area {
+    padding:10px 2rem;
+}
+
+footer {
+    margin-top:2em;
+}
+
+@media (min-width:500px){
+    body {
+        background-size:cover;
+    }
+}
+
+@media (min-width:900px) and (min-height:620px){
+    body {
+        background-image:url(./images/bg-desktop.svg);
+        background-size:cover;
+        background-position:inherit;
+        flex-direction:column;  
+    }
+
+    main {
+        width:auto;
+        max-width:1000px;
+        display:flex;
+    }
+
+
+    footer {
+        position:absolute;
+        bottom:0;
+    }
+
+    .illustration {
+        width:550px;
+        height:auto;
+    }
+
+    .img-area {
+        margin-top: 0px;
+        margin-left:3em;
+    }
+
+    .text-area {
+        text-align:left;
+        min-width:250px;
+        margin-top:5em;
+        margin-left:2em;
+        padding:0;
+    }
+
+    .icon-area {
+        position:absolute;
+        right:4em;
+        bottom:2em;
+    }
+
+    button {
+        margin-top:2px;
+    }
+
+}
