@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins&display=swap');
 
 * {
     box-sizing:border-box;
@@ -17,153 +16,148 @@ body {
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
+    margin:0;
+    padding:5px 1em;
     height:100vh;
 
 }
 
-
-h1 {
-    font-family:'Poppins';
-    font-weight:600;
-    font-size: 25px;
-}
-
-p {
-    color:rgb(231, 226, 226);
-    font-family:'Open Sans';
-}
-
-button {
-    padding: 10px 5em;
-    border-radius:20px;
-    border:none;
-    color:hsl(257, 40%, 49%);
-    font-family:'Poppins';
-    transition:0.3s ease all;
-    margin-top:1rem;
-    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.158);
-}
-
-button:hover {
-    background-color:hsl(300, 69%, 71%);
-    color:white;
-}
-
-.icon-area {
-    margin-top:3rem;
-}
-
-i {
-    color:white;
-    border: 2px solid;
-    border-radius:100%;
-    padding:8px;
-    transition:0.3s ease all;
-}
-
-i:hover {
-    color:hsl(300, 69%, 71%);
-}
-.icon:nth-child(2)
-{
-    margin-left:1em;
-    margin-right:1em;
-}
-
-main {
-     width:350px;
-    height:auto;
-    text-align:center;
-
-}
-
+/* Img: Size & Responsiveness */
 img {
     width:100%;
     height:auto;
 }
 
-
 .img-area {
-    margin-top:5rem;
+    display:flex;
+    flex-direction:column;
+    position:relative;
 }
 
-.text-area {
-    margin-top:2rem;
+.logo {
+    max-width:200px;
 }
 .illustration {
-width:350px;
-position:relative;
-top:20px;
-
+    margin-top:5em;
+   max-width:fit-content;
 }
-.logo {
-    width:130px;
-    position:relative;
-    bottom:30px;
-    float:left
+/* -------------- */
 
-}
-
+/* Text Design */
 .text-area {
-    padding:10px 2rem;
+    text-align:center;
 }
 
-footer {
-    margin-top:2em;
+h1 {
+    font-family:'Poppins';
 }
 
-@media (min-width:500px){
+p {
+    font-family:'Open Sans';
+    font-size:17px;
+    line-height:1.5em;
+}
+/* ------------------ */
+
+/* Button Design */
+button {
+    width:200px;
+    padding:15px 0px;
+    border-radius:30px;
+    border:none;
+    color:hsl(257, 40%, 49%);
+    font-family:'Open Sans';
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.068);
+    transition: background-color 0.1s ease-in;
+    cursor:pointer;
+}
+
+button:hover {
+   color:white;
+   background-color:hsl(300, 69%, 71%);
+   box-shadow: 0px 3px 5px 2px rgba(245, 245, 245, 0.068)
+}
+
+button:active {
+  transform:scale(0.98);
+}
+
+/* ---------- */
+
+/* Icon Design */
+.icon-area {
+    margin-top:3em;
+    display:flex;
+    justify-content: center
+}
+
+.icon-area i {
+    padding: 10px 10px;
+    color:white;
+    border-radius:30px;
+    border: 1px solid white;
+    margin: 10px 10px;
+    transition: background-color 0.1s ease-in, border 0.1s ease-in;
+}
+
+.icon-area i:hover {
+    color:hsl(300, 69%, 71%);
+    border: 1px solid hsl(300, 69%, 71%);
+
+}
+/* ------------ */
+
+.attribution {
+    font-size: 10px;
+    text-align: center;
+    z-index: -1;
+}
+.attribution a {
+    color:hsl(300, 69%, 71%);
+}
+
+
+/* Desktop Responsiveness */
+
+@media(min-width:900px) {
     body {
+        flex-direction:row;
+        background-image: url(./images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-position:center;
         background-size:cover;
     }
-}
 
-@media (min-width:900px) and (min-height:620px){
-    body {
-        background-image:url(./images/bg-desktop.svg);
-        background-size:cover;
-        background-position:inherit;
-        flex-direction:column;  
+    .logo {
+        max-width:200px;
     }
 
-    main {
-        width:auto;
-        max-width:1000px;
-        display:flex;
-    }
-
-
-    footer {
-        position:absolute;
-        bottom:0;
-    }
-
-    .illustration {
-        width:550px;
-        height:auto;
-    }
-
-    .img-area {
-        margin-top: 0px;
-        margin-left:3em;
+    .section {
+        margin:0px 20px;
     }
 
     .text-area {
+        max-width:500px;
         text-align:left;
-        min-width:250px;
-        margin-top:5em;
-        margin-left:2em;
-        padding:0;
     }
 
     .icon-area {
+        margin-top:0;
         position:absolute;
-        right:4em;
-        bottom:2em;
+        bottom:2.5em;
+        right:5em;
+    }
+    
+    /* Attribution Positioning for Desktop */
+    
+    .attribution {
+        font-size: 13px;
     }
 
-    button {
-        margin-top:2px;
+    footer {
+        
+        position:absolute;
+        bottom:0;
+        z-index:-1;
     }
-
 }
